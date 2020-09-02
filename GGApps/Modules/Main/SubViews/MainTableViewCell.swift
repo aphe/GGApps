@@ -15,14 +15,25 @@ class MainTableViewCell: UITableViewCell {
     static var reuseIdentifier: String {
         return String(describing: self)
     }
-    
+        
     // MARK: - Properties
     
     @IBOutlet private var titleLabel: UILabel!
     
     // MARK: -
     
-    @IBOutlet private var thumbnailImageView: UIImageView!
+    @IBOutlet var thumbnailImageView: UIImageView!
+    
+    //MARK: -
+
+    var session: URLSession = {
+        let configuration = URLSessionConfiguration.default
+        return URLSession(configuration: configuration)
+    }()
+    
+    //MARK: -
+    var downloader: ImageDownloader!
+
 
     // MARK: - Public API
     
@@ -31,9 +42,9 @@ class MainTableViewCell: UITableViewCell {
         titleLabel.text = title
         
         // Load Data
-        if let url = url, let data = try? Data(contentsOf: url) {
-            // Configure Thumbnail Image View
-            thumbnailImageView.image = UIImage(data: data)
+        if let url = url {
+            downloader = ImageDownloader(cell: self)
+            downloader.downloadImage(url: url)
         }
     }
     
@@ -41,7 +52,7 @@ class MainTableViewCell: UITableViewCell {
         super.prepareForReuse()
         
         // Reset Thumnail Image View
-        thumbnailImageView.image = nil
+        downloader.cancel()
     }
 
 

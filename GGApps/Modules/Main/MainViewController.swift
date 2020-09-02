@@ -44,6 +44,17 @@ class MainViewController: UITableViewController {
 
     ]
     
+    private var selectedRow: Int?
+    
+    // MARK: - Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? DetailViewController {
+            if let sRow = selectedRow {
+                dest.imageURL = dataSource[sRow].url
+            }
+        }
+    }
+    
     // MARK: - Table View Data Source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -72,6 +83,11 @@ class MainViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90.0
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedRow = indexPath.row
+        performSegue(withIdentifier: "showDetail", sender: self)
     }
 }
 

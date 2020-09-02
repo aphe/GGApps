@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FFA3DFAE24FF4E7300C8D9BA /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA3DFAD24FF4E7300C8D9BA /* ImageDownloader.swift */; };
+		FFA3DFB224FF551000C8D9BA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA3DFB024FF551000C8D9BA /* DetailViewController.swift */; };
 		FFD0876724FA205200FCC1D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD0876624FA205200FCC1D3 /* AppDelegate.swift */; };
 		FFD0876924FA205200FCC1D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD0876824FA205200FCC1D3 /* SceneDelegate.swift */; };
 		FFD0876B24FA205200FCC1D3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD0876A24FA205200FCC1D3 /* MainViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FFA3DFAD24FF4E7300C8D9BA /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		FFA3DFB024FF551000C8D9BA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		FFD0876324FA205200FCC1D3 /* GGApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GGApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD0876624FA205200FCC1D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFD0876824FA205200FCC1D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FFA3DFA524FF47FF00C8D9BA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FFA3DFAD24FF4E7300C8D9BA /* ImageDownloader.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FFA3DFAF24FF54F600C8D9BA /* Image Detail */ = {
+			isa = PBXGroup;
+			children = (
+				FFA3DFB024FF551000C8D9BA /* DetailViewController.swift */,
+			);
+			path = "Image Detail";
+			sourceTree = "<group>";
+		};
 		FFD0875A24FA205200FCC1D3 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +124,7 @@
 				FFD0877424FA205600FCC1D3 /* Info.plist */,
 				FFD0879824FA209E00FCC1D3 /* Resources */,
 				FFD0879624FA207D00FCC1D3 /* Modules */,
+				FFA3DFA524FF47FF00C8D9BA /* Services */,
 				FFD0876624FA205200FCC1D3 /* AppDelegate.swift */,
 				FFD0876824FA205200FCC1D3 /* SceneDelegate.swift */,
 			);
@@ -131,6 +152,7 @@
 		FFD0879624FA207D00FCC1D3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FFA3DFAF24FF54F600C8D9BA /* Image Detail */,
 				FFD0879724FA208600FCC1D3 /* Main */,
 			);
 			path = Modules;
@@ -179,6 +201,8 @@
 			dependencies = (
 			);
 			name = GGApps;
+			packageProductDependencies = (
+			);
 			productName = GGApps;
 			productReference = FFD0876324FA205200FCC1D3 /* GGApps.app */;
 			productType = "com.apple.product-type.application";
@@ -251,6 +275,8 @@
 				Base,
 			);
 			mainGroup = FFD0875A24FA205200FCC1D3;
+			packageReferences = (
+			);
 			productRefGroup = FFD0876424FA205200FCC1D3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -297,6 +323,8 @@
 				FFD0876B24FA205200FCC1D3 /* MainViewController.swift in Sources */,
 				FFD0879B24FA25EF00FCC1D3 /* MainTableViewCell.swift in Sources */,
 				FFD0876724FA205200FCC1D3 /* AppDelegate.swift in Sources */,
+				FFA3DFB224FF551000C8D9BA /* DetailViewController.swift in Sources */,
+				FFA3DFAE24FF4E7300C8D9BA /* ImageDownloader.swift in Sources */,
 				FFD0876924FA205200FCC1D3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
