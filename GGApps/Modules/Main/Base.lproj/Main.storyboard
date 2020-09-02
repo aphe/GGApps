@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ajY-Tf-0Vh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16097.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -34,12 +34,17 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="62C-g7-TMa">
+                                            <rect key="frame" x="35" y="35" width="20" height="20"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="duK-Lj-euE" firstAttribute="centerY" secondItem="4bM-Aq-htp" secondAttribute="centerY" id="N8c-xH-B4g"/>
                                         <constraint firstItem="4bM-Aq-htp" firstAttribute="leading" secondItem="wMN-Ke-isv" secondAttribute="leading" id="Nu0-Q3-5eA"/>
+                                        <constraint firstItem="62C-g7-TMa" firstAttribute="centerY" secondItem="4bM-Aq-htp" secondAttribute="centerY" id="Zlb-MU-etI"/>
                                         <constraint firstItem="duK-Lj-euE" firstAttribute="leading" secondItem="4bM-Aq-htp" secondAttribute="trailing" constant="8" id="aFk-LM-Kft"/>
                                         <constraint firstItem="4bM-Aq-htp" firstAttribute="height" secondItem="wMN-Ke-isv" secondAttribute="height" id="h1d-Yn-tOI"/>
+                                        <constraint firstItem="62C-g7-TMa" firstAttribute="centerX" secondItem="4bM-Aq-htp" secondAttribute="centerX" id="hFU-wl-D0O"/>
                                         <constraint firstItem="4bM-Aq-htp" firstAttribute="top" secondItem="wMN-Ke-isv" secondAttribute="top" id="qh5-hc-qaf"/>
                                         <constraint firstAttribute="trailing" secondItem="duK-Lj-euE" secondAttribute="trailing" constant="8" id="w8V-Rp-MKM"/>
                                     </constraints>
